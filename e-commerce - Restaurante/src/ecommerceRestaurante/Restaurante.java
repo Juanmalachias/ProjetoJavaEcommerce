@@ -1,15 +1,8 @@
 package ecommerceRestaurante;
-
 import java.text.NumberFormat;
-
-
-import java.util.Scanner;
-import java.util.Queue;
-
 import java.util.LinkedList;
-import pedidos.Pedido;
-import ecommerceRestaurante.PedidoRepository;
-import ecommerceRestaurante.PedidoController;
+import java.util.List;
+import java.util.Scanner;
 
 import Restaurante.util.Cores;
 
@@ -18,11 +11,10 @@ public class Restaurante {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
-		Queue<String>Descrição = new LinkedList<>();
-		Queue<Double>preço1 = new LinkedList<>();
+		List<String>Descrição = new LinkedList<>();
+		List<Double>preço1 = new LinkedList<>();
 		PedidoRepository pedidorepository = new PedidoRepository();
 		PedidoController pedidoController = new PedidoController(pedidorepository);
-		
 		
 		NumberFormat nfMoeda = NumberFormat.getCurrencyInstance();
 		
@@ -30,11 +22,7 @@ public class Restaurante {
 		int opcao=0,pedido=0,quantidade =0,preço=0,escolhas=0;
 		String nome = null;
 		
-		double total = 0.00;
-		
-		
-		
-		
+		double total = 0.00;	
 		
 		do {
 			System.out.println(Cores.TEXT_YELLOW_BOLD+Cores.ANSI_RED_BACKGROUND_BRIGHT+
@@ -137,7 +125,6 @@ public class Restaurante {
 		System.out.println("* Desejar pedir quantas unidades desse item?          *");
 		quantidade = leia.nextInt();
 		
-		
 		switch(pedido) {
 				case 1:
 					preço = (int) (quantidade * 18.0f);					
@@ -168,8 +155,7 @@ public class Restaurante {
 					nome = "Sopa de Cebola Gratinada";
 					pedidoController.adicionarPedido(nome, preço);
 				break;
-				
-				
+						
 				}
 		Descrição.add(nome);
 		preço1.add((double) preço);
@@ -221,8 +207,6 @@ public class Restaurante {
 		System.out.println(Cores.TEXT_YELLOW_BOLD+"* "+Cores.TEXT_DARK_GRAY+"Costelas de porco assadas lentamente, regadas "+Cores.TEXT_YELLOW_BOLD+"      *");
 		System.out.println(Cores.TEXT_YELLOW_BOLD+"* "+Cores.TEXT_DARK_GRAY+"com molho barbecue defumado, servidas com batatas  "+Cores.TEXT_YELLOW_BOLD+" *");
 		System.out.println(Cores.TEXT_YELLOW_BOLD+"* "+Cores.TEXT_DARK_GRAY+"assadas e coleslaw.  "+Cores.TEXT_YELLOW_BOLD+"                               *");
-		
-		
 		System.out.println("*                                                     *");
 		System.out.println(Cores.TEXT_YELLOW_BOLD+"*"+Cores.TEXT_RED+"  Preço: R$50,00                                   "+Cores.TEXT_YELLOW_BOLD+"  *");
 		System.out.println("*                                                     *");
@@ -297,8 +281,7 @@ public class Restaurante {
 		System.out.println("*                                                     *");
 		System.out.println(Cores.TEXT_YELLOW_BOLD+"* "+Cores.TEXT_DARK_GRAY+"Um cremoso risoto de arroz arbóreo cozido em "+Cores.TEXT_YELLOW_BOLD+"       *");
 		System.out.println(Cores.TEXT_YELLOW_BOLD+"* "+Cores.TEXT_DARK_GRAY+"caldo de legumes, com uma variedade de cogumelos  "+Cores.TEXT_YELLOW_BOLD+"  *");
-		System.out.println(Cores.TEXT_YELLOW_BOLD+"* "+Cores.TEXT_DARK_GRAY+"selvagens, finalizado com queijo parmesão.  "+Cores.TEXT_YELLOW_BOLD+"        *");
-		
+		System.out.println(Cores.TEXT_YELLOW_BOLD+"* "+Cores.TEXT_DARK_GRAY+"selvagens, finalizado com queijo parmesão.  "+Cores.TEXT_YELLOW_BOLD+"        *");		
 		System.out.println("*                                                     *");
 		System.out.println(Cores.TEXT_YELLOW_BOLD+"*"+Cores.TEXT_RED+"  Preço: R$32,00                                   "+Cores.TEXT_YELLOW_BOLD+"  *");
 		System.out.println("*                                                     *");
@@ -401,8 +384,6 @@ public class Restaurante {
 		System.out.println(Cores.TEXT_YELLOW_BOLD+"* "+Cores.TEXT_DARK_GRAY+"uma de bolo de chocolate macio e outra de ganache  "+Cores.TEXT_YELLOW_BOLD+" *");
 		System.out.println(Cores.TEXT_YELLOW_BOLD+"* "+Cores.TEXT_DARK_GRAY+"de chocolate amargo, coberta com raspas de chocolate"+Cores.TEXT_YELLOW_BOLD+"*");
 		System.out.println(Cores.TEXT_YELLOW_BOLD+"* "+Cores.TEXT_DARK_GRAY+"e servida com uma bola de sorvete de baunilha.     "+Cores.TEXT_YELLOW_BOLD+" *");
-		
-		
 		System.out.println("*                                                     *");
 		System.out.println(Cores.TEXT_YELLOW_BOLD+"*"+Cores.TEXT_RED+"  Preço: R$14,00                                   "+Cores.TEXT_YELLOW_BOLD+"  *");
 		System.out.println("*                                                     *");
@@ -429,8 +410,7 @@ public class Restaurante {
 		System.out.println("*                                                     *");
 		System.out.println(Cores.TEXT_YELLOW_BOLD+"* "+Cores.TEXT_DARK_GRAY+"Um clássico italiano feito com camadas de  "+Cores.TEXT_YELLOW_BOLD+"         *");
 		System.out.println(Cores.TEXT_YELLOW_BOLD+"* "+Cores.TEXT_DARK_GRAY+"biscoitos de champanhe embebidos em café e creme   "+Cores.TEXT_YELLOW_BOLD+" *");
-		System.out.println(Cores.TEXT_YELLOW_BOLD+"* "+Cores.TEXT_DARK_GRAY+"de mascarpone, polvilhado com cacau em pó.   "+Cores.TEXT_YELLOW_BOLD+"       *");
-		
+		System.out.println(Cores.TEXT_YELLOW_BOLD+"* "+Cores.TEXT_DARK_GRAY+"de mascarpone, polvilhado com cacau em pó.   "+Cores.TEXT_YELLOW_BOLD+"       *");		
 		System.out.println("*                                                     *");
 		System.out.println(Cores.TEXT_YELLOW_BOLD+"*"+Cores.TEXT_RED+"  Preço: R$15,00                                   "+Cores.TEXT_YELLOW_BOLD+"  *");
 		System.out.println("*                                                     *");
@@ -446,8 +426,7 @@ public class Restaurante {
 		System.out.println(Cores.TEXT_YELLOW_BOLD+Cores.ANSI_RED_BACKGROUND_BRIGHT+"*******************************************************");
 		System.out.println("              Deseja pedir Sobremesa?                  "+Cores.TEXT_RESET);
 		System.out.println();
-				
-		
+						
 		pedido = leia.nextInt();
 		System.out.println("* Desejar pedir quantas unidades desse item?          *");
 		quantidade = leia.nextInt();
@@ -624,39 +603,47 @@ public class Restaurante {
 					String ajustarQuantidade = leia.next();
 					if (ajustarQuantidade.equalsIgnoreCase("S")) {
 					    System.out.println("Digite o número do item que deseja ajustar:");
-					    int itemSelecionado = leia.nextInt() - 1; // Subtrai 1 para obter o índice correto na fila
+					    int itemSelecionado = leia.nextInt() - 1; 
 					    System.out.println("Digite a nova quantidade:");
 					    int novaQuantidade = leia.nextInt();
 
 					    // Atualizar a quantidade do item no carrinho
-					    double precoAntigo = preço1.poll(); // Remove o preço antigo da fila
+					    double precoAntigo = preço1.remove(itemSelecionado); 
 					    double novoPreco = (precoAntigo / quantidade) * novaQuantidade;
-					    preço1.offer(novoPreco); // Adiciona o novo preço à fila
+					    ;
+						preço1.add(itemSelecionado, novoPreco); 
 
-					    total = total - precoAntigo + novoPreco;
+					    total = (total - precoAntigo) + novoPreco;
 					    quantidade = novaQuantidade;
 
 					    System.out.println("Quantidade ajustada com sucesso!");
-					}
+					    
+					    System.out.println();
+						pedidoController.mostrarPedidos();
+						
+					}	
 
 					// Perguntar ao usuário se deseja remover algum item
 					System.out.println("Deseja remover algum item? (S/N)");
 					String removerItem = leia.next();
 					if (removerItem.equalsIgnoreCase("S")) {
 					    System.out.println("Digite o número do item que deseja remover:");
-					    int itemRemovido = leia.nextInt() - 1; // Subtrai 1 para obter o índice correto na fila
+					    int itemRemovido = leia.nextInt() - 1; 
 
-					    // Remover o item selecionado do carrinho
-					    Descrição.poll();
-					    total -= preço1.poll();
+					    if (itemRemovido >= 0 && itemRemovido < preço1.size()) {
+					       
+					        Descrição.remove(nome);
+					        double valorRemovido = preço1.remove(itemRemovido);
+					        total -= valorRemovido;
 
-					    System.out.println("Item removido com sucesso!");
+					        System.out.println("Item removido com sucesso!");
+					    } else {
+					        System.out.println("Índice inválido. Nenhum item removido.");
+					    }
 					}
-
+					
 					System.out.println();
-											
-					System.out.println();
-					System.out.println();
+					
 					System.out.println(Cores.TEXT_YELLOW_BOLD+Cores.ANSI_RED_BACKGROUND_BRIGHT+"*******************************************************");
 					System.out.println("*                                                     *");
 					System.out.println("*                 Formas de pagamento                 *");
@@ -674,12 +661,12 @@ public class Restaurante {
 
 				int pagamento;
 				int formaDePagemento = 0;
-				while(formaDePagemento !=0) {
+				while(formaDePagemento >1 || formaDePagemento <6) {
 				switch (formaDePagamento) {
 					case 1 -> {
 						System.out.println(Cores.TEXT_YELLOW_BOLD+Cores.ANSI_RED_BACKGROUND_BRIGHT+"*******************************************************");
 						System.out.println(Cores.TEXT_YELLOW_BOLD+Cores.ANSI_WHITE_BACKGROUND+"*                                                     *");
-						System.out.println("* "+nfMoeda.format(preço) + " pago no Cartão de Crédito.                *");
+						System.out.println("* "+nfMoeda.format(total) + " pago no Cartão de Crédito.                *");
 						System.out.println("*                                                     *");
 						System.out.println(Cores.TEXT_YELLOW_BOLD+Cores.ANSI_RED_BACKGROUND_BRIGHT+"*******************************************************");
 						System.out.println("*          Pressione qualquer tecla para sair         *");
@@ -689,17 +676,16 @@ public class Restaurante {
 					case 2 -> {
 						System.out.println(Cores.TEXT_YELLOW_BOLD+Cores.ANSI_RED_BACKGROUND_BRIGHT+"*******************************************************");
 						System.out.println(Cores.TEXT_YELLOW_BOLD+Cores.ANSI_WHITE_BACKGROUND+"*                                                     *");
-						System.out.println("* "+nfMoeda.format(preço) + " pago no Cartão de Débito.                *");
+						System.out.println("* "+nfMoeda.format(total) + " pago no Cartão de Débito.                *");
 						System.out.println("*                                                     *");
 						System.out.println(Cores.TEXT_YELLOW_BOLD+Cores.ANSI_RED_BACKGROUND_BRIGHT+"*******************************************************");
 						System.out.println("*          Pressione qualquer tecla para sair         *");
 						pagamento = leia.nextInt();
-
 					}
 					case 3 -> {
 						System.out.println(Cores.TEXT_YELLOW_BOLD+Cores.ANSI_RED_BACKGROUND_BRIGHT+"*******************************************************");
 						System.out.println(Cores.TEXT_YELLOW_BOLD+Cores.ANSI_WHITE_BACKGROUND+"*                                                     *");
-						System.out.println("* "+nfMoeda.format(preço) + " pago no Pix.                              *");
+						System.out.println("* "+nfMoeda.format(total) + " pago no Pix.                              *");
 						System.out.println("*                                                     *");
 						System.out.println(Cores.TEXT_YELLOW_BOLD+Cores.ANSI_RED_BACKGROUND_BRIGHT+"*******************************************************");
 						System.out.println("*          Pressione qualquer tecla para sair         *");
@@ -710,7 +696,7 @@ public class Restaurante {
 					case 4 -> {
 						System.out.println(Cores.TEXT_YELLOW_BOLD+Cores.ANSI_RED_BACKGROUND_BRIGHT+"*******************************************************");
 						System.out.println(Cores.TEXT_YELLOW_BOLD+Cores.ANSI_WHITE_BACKGROUND+"*                                                     *");
-						System.out.println("* "+nfMoeda.format(preço) + " pago no Vale Refeição.                    *");
+						System.out.println("* "+nfMoeda.format(total) + " pago no Vale Refeição.                    *");
 						System.out.println("*                                                     *");
 						System.out.println(Cores.TEXT_YELLOW_BOLD+Cores.ANSI_RED_BACKGROUND_BRIGHT+"*******************************************************");
 						System.out.println("*          Pressione qualquer tecla para sair         *");
@@ -720,7 +706,7 @@ public class Restaurante {
 					case 5 -> {
 						System.out.println(Cores.TEXT_YELLOW_BOLD+Cores.ANSI_RED_BACKGROUND_BRIGHT+"*******************************************************");
 						System.out.println(Cores.TEXT_YELLOW_BOLD+Cores.ANSI_WHITE_BACKGROUND+"*                                                     *");
-						System.out.println("* "+nfMoeda.format(preço) + " pago em Dinheiro.                         *");
+						System.out.println("* "+nfMoeda.format(total) + " pago em Dinheiro.                         *");
 						System.out.println("*                                                     *");
 						System.out.println(Cores.TEXT_YELLOW_BOLD+Cores.ANSI_RED_BACKGROUND_BRIGHT+"*******************************************************");
 						System.out.println("*          Pressione qualquer tecla para sair         *");

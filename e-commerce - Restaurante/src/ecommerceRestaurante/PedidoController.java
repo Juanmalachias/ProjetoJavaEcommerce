@@ -1,5 +1,5 @@
 package ecommerceRestaurante;
-
+import java.util.ArrayList;
 import java.text.NumberFormat;
 
 import pedidos.Pedido;
@@ -41,12 +41,8 @@ public class PedidoController {
 	        String formattedValorTotal = valortotal + " ".repeat(spacesToAddTotal);
 	        
 	        System.out.println("* " + formattedValorTotal + " *");
-	       // valortotal += " ".repeat(spacesToAddTotal);
-	        //System.out.println("* " + valortotal + " *");
 
 	        System.out.println(Cores.TEXT_YELLOW_BOLD + Cores.ANSI_RED_BACKGROUND_BRIGHT + 
 	                           "*******************************************************");
 	    }
-	
-	
 }
