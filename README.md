@@ -6,9 +6,13 @@ Este projeto foi desenvolvido individualmente durante o Bootcamp da Generation B
 # O objetivo do programa é mostra o cardápio  do restaurante com as seguintes funções:
 
 •	Adicionar prato ao carrinho
+
 •	Remover prato do carrinho
+
 •	Atualizar a quantidade dos pratos já selecionados 
+
 •	Carregar carrinho de compras
+
 •	Mostra as formas de pagamentos
 
 # Como usar
